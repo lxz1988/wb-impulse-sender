@@ -1,0 +1,10 @@
+# 发号器-工作节点表，使用主键自增ID作为NodeId
+CREATE TABLE `pond_work_node` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `server_id` varchar(50) NOT NULL DEFAULT '' COMMENT '服务器id 可以是MAC或IP等',
+  `path` varchar(500) NOT NULL DEFAULT '' COMMENT '服务路径',
+  `extra` varchar(500) NOT NULL DEFAULT '',
+  `work_node_ctime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `work_node_mtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

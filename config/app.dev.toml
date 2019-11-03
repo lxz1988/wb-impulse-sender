@@ -1,0 +1,38 @@
+desc = "发号器服务"
+
+[server]
+desc = "服务模块"
+
+[log]
+desc = "日志模块"
+#打印周期，以秒为单位：30s
+dump_period = 30
+
+[mysql]
+    [mysql.pond]
+    host = "数据库IP或域名"
+    port = 端口
+    user = "用户名"
+    pwd  = "密码"
+    db   = "数据库"
+
+[redis]
+    [redis.pond]
+    network = "tcp"
+    addr = "192.168.33.39:6379"
+    db = 1
+    active = 60000
+    idle = 1024
+    dialTimeout = 500
+    readTimeout = 500
+    writeTimeout = 500
+    idleTimeout = 120
+    expire = 30
+
+[number]
+    redis_key       = "pond"
+    list_key        = "pond_impulse_sender_numbers"
+    threshold       = 1000
+    generate_period = 1000
+
+
