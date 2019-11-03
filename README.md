@@ -1,7 +1,5 @@
 ### 服务池—发号器
 
-#### 项目前置
-
 #### 项目配置
 ```golang
     需要配置 wb-impulse-sender/config/app.dev的mysql和redis信息
@@ -11,7 +9,8 @@
 
 #### 运行
 ```golang
-    go run main.go --conf=$GOPATH/src/wb-impulse-sender/config/app.dev.toml
+    * 连接数据库创建依赖表，表结构见：$GOPATH/src/wb-impulse-sender/data/db/pond_work_node.db
+    * go run main.go --conf=$GOPATH/src/wb-impulse-sender/config/app.dev.toml
 ```
 
 #### 获取号码
@@ -21,5 +20,5 @@
 
 #### 项目目录信息
 ```golang
-    D03B4CDA-2CA8-4691-9D15-C2DCB263283A.jpeg
+    项目目录见：$GOPATH/src/wb-impulse-sender/data/doc/project-dir.jpeg
 ```
